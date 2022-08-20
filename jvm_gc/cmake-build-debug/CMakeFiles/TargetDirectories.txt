@@ -1,0 +1,3 @@
+/Users/leifeng/study/github/lei-jvm/jvm_gc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/leifeng/study/github/lei-jvm/jvm_gc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/leifeng/study/github/lei-jvm/jvm_gc/cmake-build-debug/CMakeFiles/lei_jvm_cpp.dir
