@@ -29,7 +29,7 @@ public class MyClassLoader {
      *
      *  注意路径后面的斜杠不可丢
      */
-    private static String searchPath = "/Users/leifeng/study/github/lei-jvm/jvm_helloworld/target/classes/";
+    private static String searchPath = "/Users/leifeng/study/github/lei-jvm/jvm-helloworld/target/classes/";
 
     /**
      *  用于存储该类加载器加载的所有类

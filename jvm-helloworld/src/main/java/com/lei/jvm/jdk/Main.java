@@ -12,6 +12,8 @@ import com.lei.jvm.hotspot.src.share.vm.runtime.Threads;
  * Created By lei
  * 2022/5/2
  *
+ * 通过对字节码的解析，来调用main方法
+ * 首先要编译产生字节码，然后指定对应的地址
  */
 
 
