@@ -2,6 +2,7 @@ package com.lei.jvm.hotspot.src.share.tools;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Arrays;
 
 /**
  * Created By lei
@@ -13,8 +14,9 @@ public class DataTranslate {
     private static final char[] HEX_CHAR = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
     public static String bytesToHexFun1(byte[] bytes) {
+        //  字节转16进制， 同下
         char[] buf = new char[bytes.length * 2];
-        int a = 0;
+        int a ;
         int index = 0;
 
         for(byte b : bytes) {
@@ -39,33 +41,7 @@ public class DataTranslate {
             buf[index++] = HEX_CHAR[b >>> 4 & 0xf];
             buf[index++] = HEX_CHAR[b & 0xf];
         }
-
         return new String(buf);
-    }
-
-    public static String bytesToHexFun3(byte[] bytes) {
-        StringBuilder buf = new StringBuilder(bytes.length * 2);
-
-        for(byte b : bytes) {
-            buf.append(String.format("%02x", new Integer(b & 0xff)));
-        }
-
-        return buf.toString();
-    }
-
-    public static byte[] toBytes(String str) {
-        if(str == null || str.trim().equals("")) {
-            return new byte[0];
-        }
-
-        byte[] bytes = new byte[str.length() / 2];
-
-        for(int i = 0; i < str.length() / 2; i++) {
-            String subStr = str.substring(i * 2, i * 2 + 2);
-            bytes[i] = (byte) Integer.parseInt(subStr, 16);
-        }
-
-        return bytes;
     }
 
     public static int byteToUnsignedShort(byte[] bytes) {
